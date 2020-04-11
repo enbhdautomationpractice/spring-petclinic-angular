@@ -24,7 +24,7 @@ app.use('/', proxy(serverProxyAddress));
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/super-protein-tracker-ui/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 /**
