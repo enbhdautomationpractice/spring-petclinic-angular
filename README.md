@@ -171,7 +171,7 @@ $ docker run -d --restart unless-stopped --name spring-petclinic-rest --network=
 
 $ docker run -d --restart unless-stopped --name spring-petclinic-angular --network=spring_petclinic_network -p 8081:8081 enbhdautomationpractice/spring-petclinic-angular
 
-Test by browsing to: http://<IP>:8081
+Test by browsing to: http://Docker_machine_IP_address:8081
 
 Note: The name for the backend application container is hardcoded in the Angular application and must be 'spring-petclinic-rest'
 
