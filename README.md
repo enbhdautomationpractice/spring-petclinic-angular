@@ -166,7 +166,9 @@ spring-petclinic-angular$ docker push enbhdautomationpractice/spring-petclinic-a
 ## How to deploy Petclinic using the Docker images
 
 $ docker network create spring_petclinic_network
+
 $ docker run -d --restart unless-stopped --name spring-petclinic-rest --network=spring_petclinic_network -p 9966:9966 enbhdautomationpractice/spring-petclinic-rest:20200414
+
 $ docker run -d --restart unless-stopped --name spring-petclinic-angular --network=spring_petclinic_network -p 8081:8081 enbhdautomationpractice/spring-petclinic-angular
 
 Test by browsing to: http://<IP>:8081
