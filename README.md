@@ -156,3 +156,23 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## How to create the Docker image
+
+spring-petclinic-angular$ ng build --prod
+spring-petclinic-angular$ docker build -t enbhdautomationpractice/spring-petclinic-angular . 
+spring-petclinic-angular$ docker push enbhdautomationpractice/spring-petclinic-angular
+
+## How to deploy Petclinic using the Docker images
+
+$ docker network create spring_petclinic_network
+$ docker run -d --restart unless-stopped --name spring-petclinic-rest --network=spring_petclinic_network -p 9966:9966 enbhdautomationpractice/spring-petclinic-rest:20200414
+$ docker run -d --restart unless-stopped --name spring-petclinic-angular --network=spring_petclinic_network -p 8081:8081 enbhdautomationpractice/spring-petclinic-angular
+
+Test by browsing to: http://<IP>:8081
+
+Note: The name for the backend application container is hardcoded in the Angular application and must be 'spring-petclinic-rest'
+
+
+
+
