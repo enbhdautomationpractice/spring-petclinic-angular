@@ -157,6 +157,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+
 ## How to build the Docker container and push it to Docker Hub
 
 - ng build --prod
@@ -165,7 +166,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## How to deploy the Docker container
 
-##### Note: It requires the backend image to be created with the name 'spring-petclinic-rest'
+###### Note: It requires the backend image to be created with the name 'spring-petclinic-rest'
 
 ##### Create network for Petclinic application if it's not already created
 - docker network create spring_petclinic_network
