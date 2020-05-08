@@ -17,7 +17,7 @@ app.use(cors());
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
-const serverProxyAddress = process.env.SERVER_PROXY_ADDRESS || 'http://localhost:9966'
+const serverProxyAddress = process.env.SERVER_PROXY_ADDRESS || 'http://localhost:8082'
 console.log("Using backend ", serverProxyAddress);
 // Set our api routes proxy to point to spring boot server
 app.use('/', proxy(serverProxyAddress));
